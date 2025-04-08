@@ -66,7 +66,7 @@ namespace YieldSample
             }
         }
 
-        public List<CarDto> Get2025CarsWithoutYield()
+        public IEnumerable<CarDto> Get2025CarsWithoutYield()
         {
             List<CarDto> cars = new List<CarDto>();
             foreach (var car in Cars)
