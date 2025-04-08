@@ -57,15 +57,6 @@ namespace YieldSample
             return cars;
         }
 
-        public IEnumerable<CarDto> Get2025CarsWithYield()
-        {
-            foreach (var car in Cars)
-            {
-                car.Year = 2025;
-                yield return car;
-            }
-        }
-
         public IEnumerable<CarDto> Get2025CarsWithoutYield()
         {
             List<CarDto> cars = new List<CarDto>();
@@ -75,6 +66,15 @@ namespace YieldSample
                 cars.Add(car);
             }
             return cars;
+        }
+
+        public IEnumerable<CarDto> Get2025CarsWithYield()
+        {
+            foreach (var car in Cars)
+            {
+                car.Year = 2025;
+                yield return car;
+            }
         }
     }
 }
